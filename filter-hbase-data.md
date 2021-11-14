@@ -21,3 +21,9 @@ scan 'hbase_card_trans', { FILTER => SingleColumnValueFilter.new(Bytes.toBytes('
 Output of the above query
 
 ![image](/images/filter-output.png)
+
+If we run the same filtering logic in hive table:
+
+![image](/images/hive-filter-output.png)
+
+The query reponse time is much better in case of HBase. HBase Command took 0.7090 sec and Hive command took 67.078 which far more than former.
